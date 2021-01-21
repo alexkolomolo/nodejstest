@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.13.2",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.3.5",
     "debug": "~2.6.9",
-    "express": "~4.13.1",
+    "express": "^4.17.1",
     "jade": "^1.11.0",
     "morgan": "1.9.1",
+    "nodemon": "^2.0.7",
     "sequelize": ">=5.3.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "assert": "^1.4.1",
