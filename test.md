@@ -42,6 +42,7 @@ Code is in this repository.
 -       Raport nr.1    21.01.2021
 
     Problem: User API doesn't return "Test User" data for ID: 1
+    
     Opis rozwiązania: Po inspekcji kodu w plikach 'models/users.js' i 'routes/users.js' zauważyłem kilka problemów. W pliku 'models/users.js', który reprezentuje lokalną bazę danych, nie istnieje wiersza z kluczem '1'. Był jedyny wpis z kluczem '0'. Moim zdaniem, zamiast '0' miało być '1', bo w bazie danych przyjęto zaczynać numerowanie od '1'. W pliku 'routes/users.js' była funkcja warunkowa sprawdzająca czy id użytkownika była równa 0 i tylko w przypadku '0' użytkownik otrzymywał informacją zwrotną w postaci objektu z info klienta. Także, żle był dołączony plik 'models/users.js' przez funkcje 'require', poprawilem to. Zmieniłem kolejność przypisania objektu z models do zmiennej, postawiłem ją przed funkcją warunkową i teraz ona sprawdza czy zmienna 'user' nie równa się NULL.
 
     *KONIEC RAPORTU*
